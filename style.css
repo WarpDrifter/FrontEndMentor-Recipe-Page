@@ -57,7 +57,8 @@ body {
 }
 
 .recipe-card hr {
-    border: 1px solid hsl(30, 18%, 87%);
+    border: none;
+    border-top: 1px solid hsl(30, 10%, 80%);
     margin: 2rem 0;
 }
 
