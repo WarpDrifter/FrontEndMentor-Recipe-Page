@@ -2,6 +2,16 @@
 :root {
     --font-serif: 'Young Serif', serif;
     --font-sans: 'Outfit', sans-serif;
+
+    /* COLORS */
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%); 
+    --rose-50: hsl(330, 100%, 98%);
   }
 
 /* MAIN STYLES */
@@ -9,7 +19,7 @@ body {
     margin: 0;
     padding: 0;
 
-    background-color: hsl(30, 54%, 90%);
+    background-color: var(--stone-100);
 }
 
 .container {
@@ -22,7 +32,7 @@ body {
 
 /* Recipe Card Main */
 .recipe-card {
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--white);
     border-radius: 1rem;
     margin: 10rem 0;
     padding: 2rem;
@@ -30,19 +40,19 @@ body {
     width: 100%;
 
     font-family: var(--font-sans);
-    color: hsl(30, 10%, 34%)
+    color: var(--stone-600);
 }
 
 .recipe-card h1 {
     font-family: var(--font-serif);
     font-size: 2rem;
-    color: hsl(24, 5%, 18%);
+    color: var(--stone-900);
 }
 
 .recipe-card h2 {
     font-family: var(--font-serif);
     font-size: 1.5rem;
-    color: hsl(14, 45%, 36%);
+    color: var(--brown);
 }
 
 .recipe-card li {
@@ -58,19 +68,23 @@ body {
 
 .recipe-card hr {
     border: none;
-    border-top: 1px solid hsl(30, 10%, 80%);
+    border-top: 1px solid var(--stone-150);
     margin: 2rem 0;
 }
 
-/* Nutrition Table */
+/* Ingredients List */
+.ingredients li::marker {
+    color: var(--brown);
+}
 
+/* Nutrition Table */
 .nutrition table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
 }
 .nutrition th,td {
-    border-bottom: 1px solid hsl(30, 10%, 80%);
+    border-bottom: 1px solid var(--stone-150);
     padding: 0.5rem;
 }
 
@@ -81,7 +95,7 @@ body {
 
 /* Prep Card */
 .prep-card {
-    background-color: hsl(330, 100%, 98%); 
+    background-color: var(--rose-50); 
     border-radius: 1rem;
     font-family: var(--font-sans);
     padding: 1rem;
@@ -89,12 +103,12 @@ body {
 }
 .prep-card .prep-title {
     margin: .5rem;
-    color: hsl(332, 51%, 32%); 
+    color: var(--rose-800); 
     font-weight: 600;
 }
 
 .prep-card li::marker {
-    color: hsl(332, 51%, 32%); 
+    color: var(--rose-800); 
 }
 
 .prep-card ul {
@@ -105,9 +119,7 @@ body {
 
 /* Attribution */
 .attribution {
-    font-family: var(--font-sans);
     font-size: 0.875rem;
-    color: hsl(30, 10%, 50%);
-    text-align: right;
+    color: var(--stone-600);
     margin-top: 2rem;
 }
